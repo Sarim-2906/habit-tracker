@@ -108,5 +108,12 @@ $('importBtn').onclick=()=>$('importFile').click();$('importFile').onchange=asyn
 load();initPeriod();render();
 })();
 </script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js");
+  });
+}
+</script>
 </body>
 </html>
